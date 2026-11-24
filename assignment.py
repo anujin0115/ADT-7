@@ -15,12 +15,14 @@ def Initialise():
 
 def OutputNodes():
     global LinkedList, FirstNode
-    CurrentPionter=FirstNode
-    while CurrentPionter !=-1:
-        print(LinkedList[CurrentPionter][0], end="\n")
+    if FirstNode!=-1:
+        CurrentPionter=FirstNode
+        while CurrentPionter !=-1:
+            print(LinkedList[CurrentPionter][0])
 
-        CurrentPionter = LinkedList[CurrentPionter][1]
-    print()
+            CurrentPionter = LinkedList[CurrentPionter][1]
+    else:
+        print()
 
 
 
