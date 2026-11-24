@@ -123,26 +123,14 @@ def LoadFromFile(FileName):
         return -1
 
 
-# Exercise 5
+# Exercise 5 
 def Reverse():
     global LinkedList, FirstNode
-    CurrentPionter = FirstNode
-    copylist=[]
-    for i in range(10):
-        copylist.append([LinkedList[i][0], LinkedList[i][1]])
-
-
-    while CurrentPionter != -1:
-        if copylist[CurrentPionter][1]==-1:
-            LinkedList[CurrentPionter][1] = PreviousPionter
-            FirstNode=CurrentPionter
-        else:
-            if copylist[CurrentPionter][1]==0:
-                LinkedList[CurrentPionter][1] = -1
-            else:
-                LinkedList[CurrentPionter][1] = PreviousPionter
-        PreviousPionter = CurrentPionter
-
-        CurrentPionter = copylist[CurrentPionter][1]
-
-
+    CurrentPointer = FirstNode
+    PreviousPointer = -1  
+    while CurrentPointer != -1:
+        NextPointer = LinkedList[CurrentPointer][1]
+        LinkedList[CurrentPointer][1] = PreviousPointer
+        PreviousPointer = CurrentPointer
+        CurrentPointer = NextPointer
+    FirstNode = PreviousPointer
