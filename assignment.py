@@ -7,6 +7,7 @@ FirstEmpty = 0
 
 def Initialise():
     global LinkedList, FirstNode, FirstEmpty
+    LinkedList = [] 
     for i in range (10):
         LinkedList.append([-1,i+1])
     LinkedList[9][1]=-1
