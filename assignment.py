@@ -142,6 +142,4 @@ def Reverse():
 
         CurrentPionter = copylist[CurrentPionter][1]
 
-Reverse()
-OutputNodes()
-print(FirstNode)
+
