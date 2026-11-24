@@ -104,22 +104,23 @@ def Delete(Item):
 
 
 
+
 # Exercise 4
 def LoadFromFile(FileName):
     try:
         count=0
         Initialise()
-        File = open("Data.txt", "r")
+        File = open(FileName, "r")
         Line = File.readline().strip()
         while Line != "" and FirstEmpty!=-1:
-            InsertInOrder(Line)
+            InsertInOrder(int(Line))
             count+=1
             Line = File.readline().strip()
         File.close()
         return count
     except IOError:
         print("File not found")
-
+        return -1
 
 
 # Exercise 5
