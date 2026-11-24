@@ -19,10 +19,9 @@ def OutputNodes():
         CurrentPionter=FirstNode
         while CurrentPionter !=-1:
             print(LinkedList[CurrentPionter][0])
-
             CurrentPionter = LinkedList[CurrentPionter][1]
     else:
-        print()
+        print("Linked list is empty")
 
 
 
