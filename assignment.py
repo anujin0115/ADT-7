@@ -65,7 +65,7 @@ def InsertInOrder(Item):
         return True
 
     while CurrentPionter != -1:
-        if LinkedList[CurrentPionter][0]>Item and LinkedList[CurrentPionter][1]!=-1:
+        if LinkedList[CurrentPionter][0]>Item:
             Save=FirstEmpty
             FirstEmpty = LinkedList[Save][1]
             LinkedList[Save][0]=Item
